@@ -1,0 +1,64 @@
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('/api/placeholder/1920/1080');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+}
+@media (max-width: 768px) {
+    #about {
+        padding-top: 100px; /* Less padding for smaller screens */
+    }
+}
+
+.service-card {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: #0d6efd;
+}
+
+.testimonial {
+    background-color: #f8f9fa;
+}
+
+.footer {
+    background-color: #212529;
+    color: white;
+}
+
+#home {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust height as needed */
+    color: white; /* To ensure text is visible on the background */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.ibb.co/hDhv8Cs/Background.png'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    filter: blur(1px); /* Adjust blur strength */
+    z-index: -1; /* Send the blurred background behind the content */
+}
+
+#home .container {
+    position: relative;
+    z-index: 1; /* Ensure content is above the background */
+}
